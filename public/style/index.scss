@@ -14,6 +14,41 @@ a {
     text-decoration: none;
 }
 
+.enterInfo {
+    position: absolute;
+    bottom: 2vh;
+    right: 5vw;
+    text-align: center;
+    background-color: $indexBackgroung;
+    border: 2px solid black;
+    border-radius: $borderRadius;
+    width: 7vw;
+    font-size: 1.5em;
+
+    &Pass {
+        background-color: $indexBackgroung;
+        border-radius: $borderRadius;
+        width: 70vw;
+        padding: 2vw;
+        position: absolute;
+        bottom: 4vh;
+        right: 7vw;
+        font-size: 0.8em;
+        visibility: hidden;
+
+
+        p {
+            padding: 1% 0%;
+            margin: 0;
+            color: rgb(2, 2, 176);
+        }
+    }
+
+    &:hover &Pass {
+        visibility: visible;
+    }
+}
+
 .indexPage {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2) 70%), url('../../image/mobile.jpg');
     background-position: center;
@@ -23,6 +58,7 @@ a {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    position: relative;
 
     &__moto {
         color: white;
@@ -43,6 +79,7 @@ a {
                 border-radius: $borderRadius;
                 font-size: 1em;
                 margin: 3% 0%;
+                text-align: center;
             }
         }
 
@@ -90,6 +127,215 @@ a {
             padding: 2% 5%;
             border-radius: $borderRadius;
             box-shadow: 0px 0px 5px grey;
+        }
+    }
+}
+
+@media (min-width: $mobileGalaxyS8) {
+    .enterInfo {
+        &Pass {
+            bottom: 5vh;
+            right: 7.5vw;
+        }
+    }
+
+    .indexPage {
+        &__moto {
+            margin: 10% 0%;
+        }
+
+        &__logRegForms {
+            &--form {
+                input {
+                    padding: 2% 2.5%;
+                    font-size: 1.2em;
+
+                }
+            }
+
+            &--regBtnSwitch,
+            &--logBtnSwitch {
+                font-size: 1.2rem;
+            }
+
+            &--forgotPass {
+                font-size: 1rem;
+            }
+
+            &--btn {
+                font-size: 1.1rem;
+                margin-bottom: 8%;
+            }
+        }
+    }
+}
+
+@media (min-width: $moileIphone12Pro) {
+    .indexPage {
+        &__moto {
+            margin: 15% 0%;
+        }
+
+        &__logRegForms {
+            padding: 4% 0;
+
+            &--form {
+                input {
+                    padding: 2.5% 3%;
+                    width: 75%;
+                }
+            }
+
+            &--btn {
+                margin: 5% 0%;
+            }
+        }
+    }
+}
+
+@media (min-width: $mobileGalaxyS20) {
+    .indexPage {
+        &__moto {
+            width: 90%;
+            margin: 20% auto;
+        }
+    }
+}
+
+@media (min-width: $tabletSurface) {
+    .enterInfo {
+        right: 3vw;
+        width: 5vw;
+        font-size: 1.3em;
+
+        &Pass {
+            width: 80vw;
+            bottom: 4.5vh;
+            right: 4vw;
+        }
+    }
+
+    .indexPage {
+        &__moto {
+            margin: 8% auto;
+        }
+
+        &__logRegForms {
+            width: 70%;
+            margin: 2% auto;
+            padding: 3% 0;
+
+            &--form {
+                input {
+                    padding: 0.5rem;
+                    font-size: 1em;
+                    margin: 3% 0%;
+                }
+            }
+
+            &--regBtnSwitch,
+            &--logBtnSwitch {
+                font-size: 1.2rem;
+            }
+
+            &--forgotPass {
+                font-size: 1rem;
+            }
+
+            &--btn {
+                padding: 2% 5%;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+////////////////////////////////////
+////////////WE STOP HERE////////////
+////////////////////////////////////
+@media (min-width: $tabletSurfacePro7) {
+    .enterInfo {
+        bottom: 3vh;
+        right: 4vw;
+        width: 5vw;
+        font-size: 2em;
+
+        &Pass {
+            font-size: 1em;
+        }
+    }
+
+    .indexPage {
+
+
+        &__moto {
+            color: white;
+            text-shadow: 0px 0px 5px black;
+        }
+
+        &__logRegForms {
+            background-color: $indexBackgroung;
+            width: 90%;
+            margin: 2% auto;
+            padding: 3% 0;
+            border-radius: $borderRadius;
+
+            &--form {
+                input {
+                    border: none;
+                    padding: 0.5rem;
+                    border-radius: $borderRadius;
+                    font-size: 1em;
+                    margin: 3% 0%;
+                    text-align: center;
+                }
+            }
+
+            &--regBtnSwitch,
+            &--logBtnSwitch {
+                color: rgb(3, 60, 183);
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
+
+            &--forgotPass {
+                text-decoration: none;
+                font-size: 0.8rem;
+                color: rgb(255, 81, 0);
+                text-shadow: 0px 0px 1px grey;
+            }
+
+            &--btn {
+                background-color: rgb(109, 174, 109);
+                border: none;
+                border-radius: $borderRadius;
+                padding: 2% 5%;
+                color: white;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: rgb(73, 132, 73);
+                    transition: $btnTransition;
+                }
+            }
+        }
+
+        &__welcome {
+            background-color: $indexBackgroung;
+            width: 90%;
+            margin: 50% auto;
+            padding: 5% 0%;
+            border-radius: $borderRadius;
+
+            &--btn {
+                font-size: 1.5rem;
+                color: green;
+                font-weight: bold;
+                background-color: aliceblue;
+                padding: 2% 5%;
+                border-radius: $borderRadius;
+                box-shadow: 0px 0px 5px grey;
+            }
         }
     }
 }
