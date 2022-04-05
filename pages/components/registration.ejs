@@ -1,12 +1,21 @@
-<form action="/auth/regist" method="POST" class="container__logReg--form">
+<form action="/auth/regist" method="POST" class="indexPage__logRegForms--form">
+    <h1>Reg</h1>
+    <% if (registError) { %>
+        <span class="alert">
+            <%- registError %>
+        </span>
+        <% } %>
 
-    <h2>Registration</h2>
-    <input type="email" name="email" id="email" placeholder="Email" required>
-    <input type="password" name="password" id="password" placeholder="Password" required>
-    <input type="password" name="repeat" id="repeat" placeholder="Confirm" required>
-    <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="repeat" placeholder="Confirm" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="hidden" name="_csrf" value="<%- csrf%>">
 
-    <!-- <input type="hidden" name="_csrf" value="<%#-csrf%>"> -->
 
-    <button type="submit">Register</button>
+            <p>Alredy have user? <span onclick="hendleShowFormLog()"
+                    class="indexPage__logRegForms--logBtnSwitch">Login</span>
+            </p>
+
+            <button type="submit" class="indexPage__logRegForms--btn">Register</button>
 </form>

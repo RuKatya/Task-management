@@ -18,16 +18,27 @@
   },
   "homepage": "https://github.com/RuKatya/MyNewCV#readme",
   "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.1",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "@types/connect-flash": "^0.0.37",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
     "colors": "^1.4.0",
     "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^3.1.1",
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.11.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.0",
     "mongoose": "^6.2.10",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.3",
     "path": "^0.12.7"
   }
 }

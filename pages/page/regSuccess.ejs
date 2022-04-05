@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../components/head') %>
+        <link rel="stylesheet" href="../style/dist/index.css">
+</head>
+
+<body>
+    <main class="indexPage">
+        <div class="indexPage__welcome">
+            <% if (user) { %>
+                <h1>Welcome <%-user.name%> to task menagment!</h1>
+                <h2>Hope you will enjoy!</h2>
+                <% } %>
+                    <a href="/" class="indexPage__welcome--btn">login</a>
+        </div>
+    </main>
+
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>
